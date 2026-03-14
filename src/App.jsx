@@ -6,6 +6,7 @@ import Count from './Count';
 import RedBlueToggle from './RedBlueToggle';
 import { Loads } from './Loads';
 import { SmartCounter } from './SmartCounter';
+import { Destructuring } from './Destructuring';
 
 // const loadPosts = async () => {
 //   const res = await fetch('https://jsonplaceholder.typicode.com/comments');
@@ -13,6 +14,13 @@ import { SmartCounter } from './SmartCounter';
 // }
 
 // const posts = fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json());
+
+const arrOfObjectOfAllRich = [
+  { name: "Elon Musk", currentNetWorth: '103,460,189,560,000', rankOfTopRich: 1 },
+  { name: "Larry Page", currentNetWorth: '30,690,000,000,000', rankOfTopRich: 2 },
+  { name: "Sergey Brin", currentNetWorth: '28,234,271,000,000', rankOfTopRich: 3 },
+  { name: "Jeff Bezos", currentNetWorth: '27,006,694,000,000', rankOfTopRich: 4 }
+]
 
 function App() {
   // const postsPromise = loadPosts();
@@ -30,7 +38,8 @@ function App() {
       {/* <Suspense fallback={<h3>Loading....</h3>}>
         <Loads posts={posts}></Loads>
       </Suspense> */}
-      <SmartCounter></SmartCounter>
+      {/* <SmartCounter></SmartCounter> */}
+      <Destructuring arr={arrOfObjectOfAllRich}></Destructuring>
     </>
   )
 }
